@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="partOne">
+        <!-- <app-main-page></app-main-page> -->
+         <app-main-page videoElement="https://ik.imagekit.io/ozrxwulka/BridalVideos/1_FINAL.mp4?updatedAt=1758745935683"></app-main-page>
+    </div>
+    <div class="partTwo">
+        <div class="partTwo-top">
+            <h4 class="heading">
+                <div class="line"></div>
+                <p style="margin: 0;  width: auto; padding: 0px 12px; letter-spacing: 2px ; font-size: 13px;">LATEST ARRIVAL</p>
+                <div class="line"></div>
+            </h4>
+            <h1 class="heading2" style="  font-family: 'MyCustomFont';">Yas Couture Bridal</h1>
+        </div>
+        <div class="partTwo-bottom">
+            <video autoplay muted loop playsinline>
+                <source src="https://ik.imagekit.io/ozrxwulka/BridalVideos/Teaser_3_FC.mp4?updatedAt=1758745931948" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="partThree" style="background-color: white;">
+        <div class="partThree-top">
+            <h1 class="heading2" style="  font-family: 'MyCustomFont';">
+                Bridal Looks</h1>
+        </div>
+        <div class="partThree-bottom">
+            <app-slidertwo slidertwo [images]="images"></app-slidertwo>
+        </div>
+    </div>
+    <div class="pageFour" style="background-color: white;">
+        <div class="pageFour-top">
+            <h1 style="  font-family: 'MyCustomFont';">DETAILS</h1>
+            <p>
+                Yas Couture's bridal collection, where every gown is meticulously designed to capture the bride's
+                essence, from intricate lace details to the infinite grace of flowing veils.
+            </p>
+        </div>
+        <div class="pageFour-mid">
+            <app-slidertwo slidertwo [images]="images2"></app-slidertwo>
+        </div>
+    </div>
+    <div class="pageseven">
+        <div class="overlay"></div>
+        <div class="background">
+            <img src="../../assets/WhatsApp Image 2025-07-03 at 20.16.48_aa9cfe6b.jpg" alt="">
+        </div>
+        <div class="heading">
+            <h1>EXCLUSIVE VIEWING</h1>
+            <p>Discover the collection through a private consultation, available online or in-person.</p>
+            <button (click)="moveNext('BookAppointment')">REQUEST AN APPOINTMENT</button>
+        </div>
+    </div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

@@ -1,0 +1,252 @@
+<div class="hero">
+<div class="background" *ngIf="!currentRoute.includes('BookAppointment')">
+  <video
+    #myVideo
+    [src]="videoElement"
+    muted
+    autoplay
+    loop
+    playsinline>
+  </video>
+</div>
+
+<div class="background black-bg" *ngIf="currentRoute.includes('BookAppointment')"></div>
+
+
+
+  <div class="header">
+    <div class="opp">
+      <div class="toggel" (click)="toggleMenu()">
+        <i class="ri-menu-line"></i>
+      </div>
+      
+      <div class="calnder" (click)="moveNext('BookAppointment')" style="cursor: pointer;">
+          <i class="ri-calendar-event-fill"></i></div>
+    </div>
+
+    <div class="logo" (click)="moveNext('main-page')" style="cursor: pointer;"><img src="../../assets/yas-logo.png.webp"
+        alt=""></div>
+    <div class="option">
+      <div class="opOne" (click)="openSidebarOne()"><i class="ri-user-line"></i></div>
+      <div class="opTwo" (click)="openSidebarTwo()"><i class="ri-heart-line"></i></div>
+    </div>
+  </div>
+  <div class="menu" [ngClass]="{'menu-open': menuVisible}">
+    <!-- Insert this right inside your .menu div, above the <ul> -->
+    <div class="menu-close" (click)="toggleMenu()">
+      <i class="ri-close-fill"></i>
+    </div>
+
+    <div class="toggel-logo"><img src="../../assets/yas-logo.png.webp" alt="">
+      <i class="ri-close-fill" class="toggel-close"></i>
+    </div>
+    <ul (mouseleave)="run && ShowandHideDetails('list1', false)"
+      (mouseleave)="run && ShowandHideDetails('list2', false)" (mouseleave)="run && ShowandHideDetails('list3', false)">
+
+
+      <li class="COUTURE" (mouseenter)="run && ShowandHideDetails('list1', true)"
+        (click)="!run && onClickHandler('list1')">
+        COUTURE<i class="ri-arrow-down-s-line"></i>
+        <div class="couture-dropdown" *ngIf="showHover && !run">
+          <div class="collection">
+            <h1 style="text-transform: uppercase; font-weight: 600;">Collection</h1>
+            <p (click)="moveNext('SummerSpring')" style="color: grey; font-size: 14px;"> SPRING / SUMMER 24</p>
+            <P (click)="moveNext('WinterFall')" style="color: grey; font-size: 14px;">  FALL / WINTER 23-24</P>
+          </div>
+          <div class="booknow">
+            <h1 style="font-weight: 600;">BOOK NOW</h1>
+            <h1 style="color: gray; font-size: 14px; text-transform: uppercase;" (click)="moveNext('BookAppointment')">book your appointment now
+            </h1>
+          </div>
+          <div class="product">
+            <div class="cardOne">
+              <img src="../../assets/summer-spring-300x450.webp" alt="">
+              <p (click)="moveNext('SummerSpring')" style="font-weight: 700;"> SPRING / SUMMER 24</p>
+            </div>
+            <div class="cardTwo">
+              <img src="../../assets/fall-winter.webp" alt="">
+              <p (click)="moveNext('WinterFall')" style="font-weight: 700;">FALL / WINTER 23-24</p>
+            </div>
+          </div>
+        </div>
+
+      </li>
+
+      <li (mouseenter)="run && ShowandHideDetails('list2', true)" (click)="!run && onClickHandler('list2')">
+        BRIDAL<i class="ri-arrow-down-s-line"></i>
+        <div class="bride-dropdown" *ngIf="showHover2&& !run">
+          <div class="collection">
+            <h1 style="text-transform: uppercase; font-weight: 600;">Collection</h1>
+            <p (click)="moveNext('Bridal')" style="font-size: 14px; color: grey;">BRIDAL COLLECTION 2024</p>
+          </div>
+          <div class="booknow">
+            <h1 style="font-weight: 600;">BOOK NOW</h1>
+            <h1 style="color: gray; font-size: 14px; text-transform: uppercase;">book your appointment now</h1>
+          </div>
+          <div class="product">
+            <div class="cardOne">
+              <img src="../../assets/3C8A1581-300x450.jpg" alt="">
+              <p (click)="moveNext('SummerSpring')" style="font-weight: 700;">SPRING / SUMMER 24</p>
+            </div>
+            <div class="cardTwo">
+              <img src="../../assets/3C8A1513-scaled-1-1.jpg.webp" alt="">
+              <p (click)="moveNext('WinterFall')" style="font-weight: 700;">FALL / WINTER 23-24</p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li (mouseenter)="run && ShowandHideDetails('list3', true)" (click)="!run && onClickHandler('list3')">
+        IN THE SPOTLIGHT<i class="ri-arrow-down-s-line"></i>
+        <div class="IN-THE-SPOTLIGHT-dropdwon" *ngIf="showHover3&& !run">
+          <div class="product">
+            <div class="card1">
+             <img (click)="moveNext('SpotLight')" src="../../assets/image11.jpeg" alt="">
+              <p style="font-weight: 700;">DEBORAH COX</p>
+            </div>
+            <div class="card2">
+               <img (click)="moveNext('SpotLight')" src="../../assets/image18.jpeg" alt="">
+               <p style="font-weight: 700;">NORA FATEHI</p>
+            </div>
+            <div class="card3">
+               <img (click)="moveNext('SpotLight')" src="../../assets/spot3.jpeg" alt="">
+               <p style="font-weight: 700;">PARIS HILTON</p>
+            </div>
+            <div class="card4"><img src="../../assets/44.jpeg" alt="" (click)="moveNext('SpotLight')">
+               <p style="font-weight: 700;">ASHANTI</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li (click)="moveNext('BookAppointment')" style="cursor: pointer;">BOOK AN APPOINTMENT</li>
+      <li class="language-dropdown" (mouseenter)="languageDropdownOpen = true"
+        (mouseleave)="languageDropdownOpen = false">
+        <span>
+          <img [src]="languages[selectedLanguage].flag" [alt]="languages[selectedLanguage].label" class="flag-icon"
+            style="border-radius: 50%; object-fit: cover;
+          object-position:  center; width: 20px; height: 20px;" />
+          {{ languages[selectedLanguage].label }}
+          <i class="ri-arrow-down-s-line"></i>
+        </span>
+
+        <div class="dropdown-content" *ngIf="languageDropdownOpen">
+          <div class="dropdown-option" (click)="switchLanguage(alternateLanguage)">
+            <img [src]="languages[alternateLanguage].flag" [alt]="languages[alternateLanguage].label" class="flag-icon"
+              style="border-radius: 50%; object-fit: fill;
+          object-position:  center; width: 20px; height: 20px;" />
+            {{ languages[alternateLanguage].label }}
+          </div>
+        </div>
+      </li>
+
+
+      <div class="COUTURE-Hover" *ngIf="showHover && run" (mouseenter)="run && ShowandHideDetails('list1', true)">
+        <div class="collection-book-now-parent">
+        <div class="collection">
+          <h1 style="cursor: pointer;">Collection</h1>
+          <p style="cursor: pointer;" (click)="moveNext('SummerSpring')"> SPRING / SUMMER 24</p>
+          <P style="cursor: pointer;" (click)="moveNext('WinterFall')"> FALL / WINTER 23-24</P>
+        </div>
+        <div class="booknow">
+          <h1 style="cursor: pointer;">BOOK NOW</h1>
+          <h1 style="color: gray;  cursor: pointer; font-size: 14px; margin-top: 40px; font-weight: 400;"
+            (click)="moveNext('BookAppointment')">book your
+            appointment now</h1>
+        </div>
+        </div>
+        <div class="product">
+          <div class="cardOne">
+            <img src="../../assets/summer-spring-300x450.webp" alt="">
+            <p style="cursor: pointer; font-weight: 700 ;" (click)="moveNext('SummerSpring')">SPRING / SUMMER 24</p>
+          </div>
+          <div class="cardTwo">
+            <img src="../../assets/fall-winter.webp" alt="">
+            <p style="cursor: pointer; font-weight: 700;" (click)="moveNext('WinterFall')">FALL / WINTER 23-24</p>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="bride-Hover" *ngIf="showHover2&& run" (mouseenter)="run && ShowandHideDetails('list2', true)">
+        <div class="collection-book-now-parent">
+        <div class="collection">
+          <h1>Collection</h1>
+          <p style="cursor: pointer; color: gray; margin-top: 40px;" (click)="moveNext('Bridal')"> BRIDAL COLLECTION
+            2024</p>
+
+        </div>
+        <div class="booknow">
+          <h1>BOOK NOW</h1>
+          <h1 style="color: gray;  cursor: pointer; font-size: 14px; margin-top: 40px; font-weight: 400;"
+            (click)="moveNext('BookAppointment')">book your appointment now</h1>
+        </div>
+        </div>
+        <div class="product">
+          <div class="cardOne">
+            <img src="../../assets/j11.webp" alt="">
+            <p style="cursor: pointer; font-weight: 700;" (click)="moveNext('SummerSpring')">BRIDAL COLLECTION 2024</p>
+          </div>
+          <div class="cardTwo">
+            <img src="../../assets/3C8A1513-scaled-1-1.jpg.webp" alt="">
+            <p style="cursor: pointer; font-weight: 700;" (click)="moveNext('WinterFall')">BRIDAL COLLECTION 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="IN-THE-SPOTLIGHT" *ngIf="showHover3&& run" (mouseenter)="run && ShowandHideDetails('list3', true)">
+        <div class="product">
+          <div class="card1">
+            <img style="cursor: pointer;" (click)="moveNext('SpotLight')" src="../../assets/image11.jpeg" alt="">
+            <p style="cursor: pointer;">DEBORAH COX</p>
+          </div>
+          <div class="card2">
+            <img style="cursor: pointer;"  (click)="moveNext('SpotLight')" src="../../assets/image18.jpeg" alt="">
+            <p style="cursor: pointer;" >NORA FATEHI</p>
+          </div>
+          <div class="card3">
+            <img style="cursor: pointer;"  (click)="moveNext('SpotLight')" src="../../assets/spot3.jpeg" alt="">
+            <p style="cursor: pointer;" >PARIS HILTON</p>
+          </div>
+          <div class="card4">
+            <img style="cursor: pointer;" (click)="moveNext('SpotLight')" src="../../assets/44.jpeg" alt="">
+            <p style="cursor: pointer;" >ASHANTI</p>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>
+<!-- <div class="opOne-sideBar"[ngStyle]="{ left: sidebarOneOpen ? '0px' : '-450px' }">
+  <div class="sign-logo">
+    <i class="ri-user-fill"></i>
+    <div class="sign-close" (click)="closeSidebarOne()"><i class="ri-close-large-line"></i></div>
+    <p>SIGN IN</p>
+  </div>
+  <div class="sign-form">
+    <div class="sign-input-box">
+      <p>Username or Email</p>
+      <input type="text">
+    </div>
+    <div class="sign-input-box">
+      <p style="margin-right: 210px;">Passwrod</p>
+      <input type="text">
+    </div>
+    <div class="sign-input-box-check">
+      <input type="checkbox">
+      <p> Remember me</p>
+    </div>
+    <button class="sign-button">LOGIN</button>
+    <div class="sign-help">Lost your password?</div>
+  </div>
+</div>
+<div class="opTwo-sideBar"  [ngStyle]="{ right: sidebarTwoOpen ? '0px' : '-450px' }">
+  <div class="wish-logo"(click)="closeSidebarTwo()">
+
+    <i class="ri-poker-hearts-fill"></i>
+    <div class="wish-close"><i class="ri-close-large-line"></i></div>
+    <p>WISHLIST</p>
+  </div>
+  <div class="wish-show">
+    <p>no product on th wish list</p>
+    <button class="wish-button">LOGIN</button>
+  </div>
+</div> -->

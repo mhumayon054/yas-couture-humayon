@@ -1,0 +1,454 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  /* Remove or avoid setting a fixed height for .main */
+}
+h1{
+    font-family: 'MyCustomFont' !important;
+}
+
+.pageFive-bottom {
+  width: 100%;
+  /* Remove any fixed height! */
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .pageFive-bottom {
+    min-height: 300px;
+    height: auto;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .pageFive-bottom {
+    min-height: 140px;
+    height: auto;
+    padding-bottom: 8px;
+  }
+}
+.partOne {
+  width: 100%;
+}
+
+.partTwo, .partThree {
+      position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+      padding: 40px 0 40px;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+      z-index: 0;
+}
+
+.partTwo-left {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.partTwo-right{
+  width: 65%;
+  height: 100%;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.spring-summer-section {
+  // margin-top: 8vw;
+  margin-left: 3vw;
+  max-width: 90vw;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.spring-summer-section h1 {
+  font-size: 3vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+  letter-spacing: 1px;
+  
+}
+
+.spring-summer-section p {
+  font-size: 1.11vw;
+  color: #888;
+  max-width: 60vw;
+  line-height: 1.5;
+  margin-bottom: 4vw;
+}
+
+.spring-summer-section button {
+
+  padding: 1.2vw 3vw;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.spring-summer-section button:hover {
+  background: #222;
+  color: #fff;
+}
+
+.partTwo-right, .pageFour-mid, .pageFive-bottom {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partThree-left {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.partThree-right {
+  width: 55%;
+  height: 100%;
+
+  .spring-summer-section{
+    margin-right: 3vw !important;
+  }
+}
+
+.pageFour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 10px;
+  gap: 10px;
+}
+
+.pageFour .pageFour-top h1 {
+  font-size: 3vw;
+  font-weight: 400;
+  margin-bottom: 1vw;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.pageFour .pageFour-bottom button{
+     padding: 1.2vw 2vw;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+    border: 1px solid #222;
+    background: transparent;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pageFour .pageFour-top p {
+  font-size: 1.11vw;
+  color: #888;
+  max-width: 60vw;
+  line-height: 1.5;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+.pageFour .pageFour-bottom button:hover {
+  background: #222;
+  color: #fff;
+}
+.pageFour .pageFive-bottom{
+  padding: 93px
+}
+
+.pageFour-mid, .pageFive-bottom {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+      max-width: 865px;
+}
+
+.pageFive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // padding: 0px 10px;
+}
+
+.pageFive .heading {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 16px;
+
+}
+
+.pageFive .line {
+  width: 70px;
+  height: 0.5px;
+  background-color: black;
+}
+
+.pageFive .heading2 {
+  font-size: 55px;
+  color: black;
+  font-weight: 300;
+  text-align: center;
+  margin:0px 2px 0px  20px;
+}
+
+.pageFive p {
+  font-size: 1vw;
+  color: #020202;
+  max-width: 60vw;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.pageFive-bottom {
+  width: 100%;
+  /* Remove any fixed height! */
+  min-height: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Prevent child overflow: */
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 24px;
+  max-width: unset !important;
+}
+
+/* ===================== Responsive Fixes ===================== */
+@media (max-width: 900px) {
+  .main {
+    overflow-x: hidden;
+  }
+  
+  .partTwo, .partThree, .pageFour-mid, .pageFive-bottom {
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    width: 100%;
+    min-height: unset; /* Remove any min-height if applied elsewhere */
+  }
+  .partTwo {
+    flex-direction: column-reverse;
+  }
+  .partTwo-left, .partTwo-right,
+  .partThree-left, .partThree-right,
+  .pageFour-mid, .pageFive-bottom {
+    width: 100%;
+    height: auto;
+  }
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 7vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p,
+  .pageFive p {
+    font-size: 3vw;
+    max-width: 90vw;
+  }
+  .spring-summer-section button,
+  .pageFour .pageFour-bottom button {
+    font-size: 3vw;
+    padding: 2vw 5vw;
+  }
+  .pageFour-mid,
+  .pageFive-bottom {
+    height: auto;
+  }
+  .pageFive-bottom {
+    min-height: 400px;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .partTwo-left, .partTwo-right,
+  .partThree-left, .partThree-right,
+  .pageFour-mid, .pageFive-bottom {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 8vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p,
+  .pageFive p {
+    font-size: 4vw;
+    max-width: 98vw;
+  }
+  .spring-summer-section button,
+  .pageFour .pageFour-bottom button {
+        font-size: 4vw;
+        padding: 4.5vw 6vw;
+        text-transform: uppercase;
+  }
+  .heading {
+    font-size: 12px;
+  }
+  .pageFive .heading2 {
+    font-size: 22px;
+  }
+  .pageFive-bottom {
+    min-height: 220px;
+    height: auto;
+  }
+
+}
+
+/* Optional: for very small screens */
+@media (max-width: 400px) {
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 10vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p
+  {
+    font-size: 5vw;
+  }
+
+  .pageFive-bottom {
+    min-height: 120px;
+  }
+  .spring-summer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+      .spring-summer-section p,  .spring-summer-section p{
+      text-align:center;
+    }
+    
+}
+@media (max-width: 900px) {
+  .spring-summer-section{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 4vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p{
+    font-size: 2vw;
+  }
+
+  .pageFour-bottom button {
+    width: 100%;
+    min-height: 45px;
+  }
+  .pageFive .heading2 {
+    font-size: 24px;
+  }
+        .spring-summer-section h1,  .spring-summer-section p{
+      text-align:center;
+    }
+      .spring-summer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+      .spring-summer-section p,  .spring-summer-section p{
+      text-align:center;
+    }
+}
+
+@media (max-width: 600px) {
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 6vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p {
+    font-size: 3vw;
+  }
+ 
+  .pageFive .heading2 {
+    font-size: 18px;
+  }
+    .spring-summer-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+      .spring-summer-section p,  .spring-summer-section p{
+      text-align:center;
+      justify-content: center;
+    }
+  .pageFive .pageFive-top .heading{
+    font-size: 13px;
+  }
+  .pageFive .pageFive-top .heading2{
+    font-size: 36px;
+  }
+  .pageFive .pageFive-top .detail{
+    padding: 0px 18px ;
+  }
+}
+
+@media (max-width: 480px) {
+  .spring-summer-section h1,
+  .pageFour .pageFour-top h1 {
+    font-size: 6.5vw;
+  }
+  .spring-summer-section p,
+  .pageFour .pageFour-top p,
+  .pageFive p {
+    font-size: 3vw;
+  }
+
+}
+@media (max-width: 900px) {
+  .pageFive-bottom {
+    min-height: 300px;
+    height: auto;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .pageFive-bottom {
+    min-height: 140px;
+    height: auto;
+    padding-bottom: 8px;
+  }
+}
+.pageFour-bottom{
+  padding-top: 50px;
+}
